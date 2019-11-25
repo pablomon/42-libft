@@ -10,7 +10,7 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
 	ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c \
 	ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
-	ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c 
+	ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 
 SRCBONUS = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c \
 	ft_lstclear_bonus.c ft_lstdelone_bonus.c ft_lstiter_bonus.c \
@@ -21,16 +21,23 @@ INCLUDE = libft.h
 OBJ = $(SRC:.c=.o)
 OBJBONUS = $(SRCBONUS:.c=.o)
 
-all:	NAME
+all:	$(NAME)
 
-NAME:	$(OBJ) $(INCLUDE)
-	ar rcs $(NAME) $(OBJ)
+$(NAME):	$(OBJ)
+	ar rc -o $@ $^
 
-bonus:	$(OBJBONUS) $(OBJ) $(INCLUDE)
-	ar rcs $(NAME) $(OBJBONUS) $(OBJ)
+%.o:%.c $(INCLUDE)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+bonus:	$(OBJBONUS) $(OBJ)
+	ar rc -o $(NAME) $^
 
 clean:
-	rm *.o
+	rm -f *.o
 
 fclean:	clean
-	rm $(NAME)
+	rm -f $(NAME)
+
+re:	fclean all
+
+rebonus: fclean bonus
