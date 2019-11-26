@@ -1,0 +1,121 @@
+[38;5;46m make -j 3 -C ../libft [31m
+gcc -c -o ft_strlcpy.o ft_strlcpy.c 
+gcc -o test ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_iscontained.o ft_isdigit.o ft_isprint.o ft_isspace.o ft_itoa.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_nbrlen.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strncpy.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_wordcount.o ft_wordlen.o main.o 
+ar rcs libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_iscontained.o ft_isdigit.o ft_isprint.o ft_isspace.o ft_itoa.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_nbrlen.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strncpy.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_wordcount.o ft_wordlen.o main.o
+[38;5;46m make bonus -j 3 -C ../libft
+[38;5;46m cp ../libft/libft.a assets/ [31m
+[38;5;46m➤ [38;5;47m clang -shared -fPIC assets/tmp/ft_atoi.o assets/tmp/ft_bzero.o assets/tmp/ft_calloc.o assets/tmp/ft_isalnum.o assets/tmp/ft_isalpha.o assets/tmp/ft_isascii.o assets/tmp/ft_iscontained.o assets/tmp/ft_isdigit.o assets/tmp/ft_isprint.o assets/tmp/ft_isspace.o assets/tmp/ft_itoa.o assets/tmp/ft_memccpy.o assets/tmp/ft_memchr.o assets/tmp/ft_memcmp.o assets/tmp/ft_memcpy.o assets/tmp/ft_memmove.o assets/tmp/ft_memset.o assets/tmp/ft_nbrlen.o assets/tmp/ft_putchar_fd.o assets/tmp/ft_putendl_fd.o assets/tmp/ft_putnbr_fd.o assets/tmp/ft_putstr_fd.o assets/tmp/ft_split.o assets/tmp/ft_strchr.o assets/tmp/ft_strdup.o assets/tmp/ft_strjoin.o assets/tmp/ft_strlcat.o assets/tmp/ft_strlcpy.o assets/tmp/ft_strlen.o assets/tmp/ft_strmapi.o assets/tmp/ft_strncmp.o assets/tmp/ft_strncpy.o assets/tmp/ft_strnstr.o assets/tmp/ft_strrchr.o assets/tmp/ft_strtrim.o assets/tmp/ft_substr.o assets/tmp/ft_tolower.o assets/tmp/ft_toupper.o assets/tmp/ft_wordcount.o assets/tmp/ft_wordlen.o assets/tmp/main.o -o libft.so [31m
+[38;5;46;m[  Linking #0  ][0m
+[38;5;46m➤ [38;5;47m clang -Werror -Wall -Wextra -O2 -funroll-loops -lncurses -o assets/libtests obj/src/main.o obj/src/test_functions.o obj/src/display_test_result.o obj/src/signal.o obj/src/sandbox.o obj/src/bench_functions.o obj/src/additional_functions.o obj/hardcore-mode/hardcore-main.o obj/hardcore-mode/error.o obj/hardcore-mode/ncurses-display.o obj/hardcore-mode/test-init.o obj/hardcore-mode/test-utils.o obj/hardcore-mode/test-strcpy.o obj/hardcore-mode/test-strcmp.o obj/hardcore-mode/test-strncmp.o obj/hardcore-mode/test-memset.o obj/hardcore-mode/test-memcpy.o obj/hardcore-mode/test-memccpy.o obj/hardcore-mode/test-memmove.o obj/hardcore-mode/test-memchr.o obj/hardcore-mode/test-memcmp.o obj/hardcore-mode/test-strlen.o obj/hardcore-mode/test-strncpy.o obj/hardcore-mode/test-strcat.o obj/hardcore-mode/test-strncat.o obj/hardcore-mode/test-strchr.o obj/hardcore-mode/test-strrchr.o obj/hardcore-mode/test-strstr.o[31m
+[38;5;93mRUNNING TESTS:
+[38;5;82m                      First part
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+     "-.-"     "-.-"     "-.-"     "-.-"     "-.-"    [0m
+[0mft_memset:     [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[0mft_bzero:      [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[0mft_memcpy:     [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;160m[CRASH] [0m
+[[38;5;160mcrash[0m]: your memcpy does not behave well with NULL as both params with size
+
+[0mft_memccpy:    [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[[38;5;160mfail[0m]: your memccpy doesn't cast the stop-character into unsigned char
+
+[0mft_memmove:    [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;160m[FAILED] [0m[38;5;160m[FAILED] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;160m[NO CRASH] [0m[38;5;160m[NO CRASH] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[[38;5;160mfail[0m]: your memmove does not work with basic input
+[[38;5;160mfail[0m]: your memmove does not work with \0 and others unsigned char codes
+[[38;5;160mfail[0m]: your memmove does not work with integers copy
+[[38;5;160mfail[0m]: your memmove does not support the overlap (test 1)
+[[38;5;160mfail[0m]: your memmove does not support the overlap (test 2)
+[[38;5;160mno crash[0m]: your memmove does not segfault when null params is sent
+[[38;5;160mno crash[0m]: your memmove does not segfault when null params is sent
+
+[0mft_memchr:     [0m[38;5;160m[FAILED] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;160m[NO CRASH] [0m
+[[38;5;160mfail[0m]: your memchr does not work with basic input
+[[38;5;160mfail[0m]: your memchr does not cast in unsigned the memory
+[[38;5;160mfail[0m]: your memchr does not work on basic input
+[[38;5;160mfail[0m]: your memchr failed to find a \0
+[[38;5;160mno crash[0m]: your memchr does not segfault when null param is sent
+
+[0mft_memcmp:     [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[0mft_strlen:     [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[0mft_isalpha:    [0m[38;5;46m[OK] [0m
+[0mft_isdigit:    [0m[38;5;46m[OK] [0m
+[0mft_isalnum:    [0m[38;5;46m[OK] [0m
+[0mft_isascii:    [0m[38;5;46m[OK] [0m
+[0mft_isprint:    [0m[38;5;46m[OK] [0m
+[0mft_toupper:    [0m[38;5;46m[OK] [0m
+[0mft_tolower:    [0m[38;5;46m[OK] [0m
+[0mft_strchr:     [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[0mft_strrchr:    [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[[38;5;160mfail[0m]: your strrchr does not work with \0
+
+[0mft_strncmp:    [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[0mft_strlcpy:    [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;203m[💥 ] [0m
+[[38;5;160mfail[0m]: your strlcpy overflow the dest
+
+[0mft_strlcat:    [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[0mft_strnstr:    [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[0mft_atoi:       [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;226m[KO] [0m[38;5;226m[KO] [0m[38;5;46m[OK] [0m
+[[38;5;226mKO[0m]: your atoi does not work with over long max value
+[[38;5;226mKO[0m]: your atoi does not work with over long min value
+
+[0mft_calloc:     [0m[38;5;46m[OK] [0m[38;5;160m[CRASH] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m
+[[38;5;160mcrash[0m]: you didn't protect your malloc return
+[[38;5;160mfail[0m]: your calloc don't work with 0 size
+
+[0mft_strdup:     [0m[38;5;160m[MISSING][0m
+[38;5;10m
+In this part, you can choose to protect your function or not to,
+a color code will tell you if your function is protected/not BUT stay coherent !
+[38;5;250m[🛡 ][38;5;10m --> protected
+[38;5;203m[💥 ][38;5;10m --> not protected[0m[0m[38;5;226m
+                     Second part
+ __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)
+(______)(______)(______)(______)(______)(______)(______)(___
+
+[0mft_substr:     [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;250m[🛡 ] [0m
+[0mft_strjoin:    [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;203m[💥 ] [0m
+[0mft_strtrim:    [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;250m[🛡 ] [0m
+[0mft_split:      [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;250m[🛡 ] [0m
+[0mft_itoa:       [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[[38;5;160mfail[0m]: your itoa does not work with basic input
+[[38;5;160mfail[0m]: your itoa does not work with min int
+[[38;5;160mfail[0m]: your itoa don't set \0 at the end of the string
+
+[0mft_strmapi:    [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;203m[💥 ] [0m
+[0mft_putchar_fd: [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;226m[KO] [0m 
+[[38;5;226mKO[0m]: your putchar_fd does not work with unicode
+
+[0mft_putstr_fd:  [0m[38;5;46m[OK] [0m [38;5;46m[OK] [0m[38;5;250m[🛡 ] [0m 
+[0mft_putendl_fd: [0m[38;5;46m[OK] [0m [38;5;46m[OK] [0m[38;5;250m[🛡 ] [0m
+[0mft_putnbr_fd:  [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m
+[[38;5;160mfail[0m]: your putnbr_fd does not work with int min
+[[38;5;160mfail[0m]: your putnbr_fd allocate memory, wtf ???
+
+[38;5;9m
+ /~~~\/~~\/~~~\/~~~\/~~\/~~~\                    /~~~\/~~\/~~~\/~~~\/~~\/~~~\
+ | /\/ /\/ /\ || /\/ /\/ /\ |                    | /\ \/\ \/\ || /\ \/\ \/\ |
+  \ \/ /\/ /\/ /\ \/ /\/ /\/ /     Bonus part     \ \/\ \/\ \/ /\ \/\ \/\ \/ /
+   \ \/\ \/\ \/  \ \/\ \/\ \/                      \/ /\/ /\/ /  \/ /\/ /\/ /
+,_/\ \/\ \/\ \__/\ \/\ \/\ \______________________/ /\/ /\/ /\__/ /\/ /\/ /\_,
+(__/\__/\__/\____/\__/\__/\________________________/\__/\__/\____/\__/\__/\__)
+
+[0mft_lstnew:     [0m[38;5;160m[MISSING][0m
+[0mft_lstadd_front: [0m[38;5;160m[MISSING][0m
+[0mft_lstsize:    [0m[38;5;160m[MISSING][0m
+[0mft_lstlast:    [0m[38;5;160m[MISSING][0m
+[0mft_lstadd_back:[0m[38;5;160m[MISSING][0m
+[0mft_lstdelone:  [0m[38;5;160m[MISSING][0m
+[0mft_lstclear:   [0m[38;5;160m[MISSING][0m
+[0mft_lstiter:    [0m[38;5;160m[MISSING][0m
+[0mft_lstmap:     [0m[38;5;160m[MISSING][0m
+[0mft_strncpy:    [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;160m[FAILED] [0m[38;5;160m[FAILED] [0m[38;5;160m[FAILED] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m[38;5;46m[OK] [0m
+[[38;5;160mfail[0m]: your strncpy does not work with basic input
+[[38;5;160mfail[0m]: your strncpy does not support unicode ?
+[[38;5;160mfail[0m]: your strncpy does not work with an 0 as lenght
+[[38;5;160mfail[0m]: your strncpy does not fill with \0 the rest of the dest buffer
+[[38;5;160mfail[0m]: your strncpy put the bad number of \0 at the end of the string
+[38;5;9m
+
+⚠ : your libft is using forbidden functions so the result may not be relevant !
+[0m
+See result.log for more informations !

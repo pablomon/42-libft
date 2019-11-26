@@ -6,7 +6,7 @@
 /*   By: pmontese <pmontese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 19:43:03 by pmontese          #+#    #+#             */
-/*   Updated: 2019/11/20 16:50:54 by pmontese         ###   ########.fr       */
+/*   Updated: 2019/11/25 17:46:10 by pmontese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
-	if ((ft_strlen(s) - start) < len)
 		return (ft_strdup(""));
 	if (!(substr = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);

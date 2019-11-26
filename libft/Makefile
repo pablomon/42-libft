@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: pmontese <pmontese@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/11/25 17:43:09 by pmontese          #+#    #+#              #
+#    Updated: 2019/11/25 17:43:09 by pmontese         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 .PHONY = all clean
 
 CC = gcc
@@ -24,13 +36,15 @@ OBJBONUS = $(SRCBONUS:.c=.o)
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	ar rc -o $@ $^
+	ar rc $@ $^
+	ranlib $(NAME)
 
 %.o:%.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus:	$(OBJBONUS) $(OBJ)
-	ar rc -o $(NAME) $^
+	ar rc $(NAME) $^
+	ranlib $(NAME)
 
 clean:
 	rm -f *.o
